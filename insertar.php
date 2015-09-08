@@ -10,7 +10,7 @@ include('config.php');
         mysql_select_db($dbname,$link);
 
         // Con esta sentencia SQL insertaremos los datos en la base de datos
-        mysql_query("INSERT INTO usuarios (name,code,email,confirmed)
+        mysql_query("INSERT INTO users.boda (name,code,email,confirmed)
         VALUES ('{$_POST['name']}','{$_POST['code']}','{$_POST['email']}',false)",$link);
 
         // Ahora comprobaremos que todo ha ido correctamente

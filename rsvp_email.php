@@ -1,18 +1,21 @@
 <?php
 include('config.php');
-
+session_start();
 $asistencia = "";
+$asistencia_str = "";
 
 if(isset($_POST['voy'])){
-	$asistencia = "viene";
+	$asistencia = true;
+	$asistencia_str = "va a venir";
 }else if(isset($_POST['noVoy'])){
-	$asistencia = "no viene";
+	$asistencia = false;
+	$asistencia_str = "NO va a venir";
 }
 
 $to = "mevsmyself@gmail.com";
 $subject = "[BODA] "+ $_POST['name'];
 
-$message = $_POST['name'] + $asistencia;
+$message = $_POST['name'] + $asistencia_str + "| Color de vestido: " + $_POST['color'] + " | Talla de pie: " + $_POST['talla'] + " | Mensaje:" + $_POST['mensaje'];
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -22,6 +25,24 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers .= 'From: <confirmacion@abelymaria.com>' . "\r\n";
 $headers .= 'Cc: mariaza66@hotmail.com' . "\r\n";
 
+// Si entramos es que todo se ha realizado correctamente
+$link = mysql_connect ($dbhost, $dbusername, $dbuserpass);
+mysql_select_db($dbname,$link);
 
-//mail($to,$subject,$message,$headers);
+$query_str = "UPDATE users.boda SET name='{$_POST['name']}', email='{$_POST['email']}', colorVestido='{$_POST['color']}', confirmed='$asistencia', tallaPie='{$_POST['talla']}' WHERE ID='{$_SESSION['ID']}'";
+$query = mysql_query($query_str,$link);
+
+$my_error = mysql_error($link);
+
+if(!empty($my_error)) {
+
+	echo "Ha habido un error al insertar los valores. $my_error";
+
+} else {
+	mail($to,$subject,$message,$headers);
+	echo "Los datos han sido introducidos satisfactoriamente. $query_str";
+
+}
+
+
 ?>

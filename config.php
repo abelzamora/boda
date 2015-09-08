@@ -1,7 +1,7 @@
 <?php
 $dbhost='localhost';
 $port='3306';
-$dbusername='abel';
+$dbusername='root';
 $dbuserpass='root';
-$dbname='boda';
+$dbname='users.boda';
 ?>

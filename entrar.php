@@ -6,13 +6,22 @@ session_start();
 
 // Conectar a la base de datos
 mysql_connect ($dbhost, $dbusername, $dbuserpass);
-mysql_select_db($dbname) or die('No se puede seleccionar la base de datos');
+$link = mysqli_init();
+$success = mysqli_real_connect(
+		$link,
+		$host,
+		$user,
+		$password,
+		$db,
+		$port
+) or die('Error al seleccionar la base de datos');
+//mysql_select_db($dbname) or die('No se puede seleccionar la base de datos a');
 
 $code=$_POST['code'];
 if (!empty($code)) {
 	//Comprobacion del envio del nombre de usuario y password
 	
-		$query = mysql_query("SELECT email,name FROM usuarios WHERE code = '$code'") or die(mysql_error());
+		$query = mysql_query("SELECT email,name,ID FROM users.boda WHERE code = '$code'") or die(mysql_error());
 		$data = mysql_fetch_array($query);
 		
 		if($data['email'] == null || $data['email'] == "") {
@@ -22,6 +31,7 @@ if (!empty($code)) {
 		}else{
 			$_SESSION["name"] = $data['name'];
 			$_SESSION["email"] = $data['email'];
+			$_SESSION["ID"] = $data['ID'];
 			$_SESSION["code"] = $code;
 			$_SESSION["logeado"] = "SI";
 			include('general.php');

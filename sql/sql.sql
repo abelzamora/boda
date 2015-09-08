@@ -1,4 +1,4 @@
-CREATE TABLE usuarios (
+CREATE TABLE boda (
 ID int(8) unsigned NOT NULL auto_increment,
 name varchar(20),
 code varchar(25),

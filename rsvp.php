@@ -78,58 +78,32 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 <div id="node-1" class="node node-webform node-promoted" about="/d/rsvp" typeof="sioc:Item foaf:Document">
 
   <div class="content clearfix">
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="title">KINDLY RESPOND BY</div>
-<div class="sub">the fifteenth of July</div>
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="title">Por favor, responder antes de</div>
+<div class="sub">el uno de Julio</div>
 </div></div></div><form class="webform-client-form" enctype="multipart/form-data" action="rsvp_email.php" method="post" id="webform-client-form-1" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-name">
   <label for="edit-submitted-name">Nombre <span class="form-required" title="This field is required.">*</span></label>
  <input type="text" id="name" name="name" value="<?php echo $_SESSION["name"];?>" size="30" maxlength="128" class="form-text required" />
- <div class="description">Please separate full names by commas.</div>
 </div>
 <div class="form-item webform-component webform-component-email webform-container-inline" id="webform-component-email">
   <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
  <input class="email form-text form-email required" type="email" id="email" value="<?php echo $_SESSION["email"];?>" name="email" size="50" />
 </div>
-<div class="form-item webform-component webform-component-radios" id="webform-component-attendance">
+ <fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-entree"><legend><span class="fieldset-legend">Dinos si vas a venir</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-entree--entree">
  <div id="edit-submitted-attendance" class="form-radios"><div class="form-item form-type-radio form-item-submitted-attendance">
  <input type="radio" id="voy" name="voy" value="voy" class="form-radio" />  <label class="option" for="voy">Si, voy a ir </label>
-
 </div>
 <div class="form-item form-type-radio form-item-submitted-attendance">
  <input type="radio" id="noVoy" name="noVoy" value="noVoy" class="form-radio" />  <label class="option" for="noVoy">No, no voy a ir </label>
 
 </div>
 </div>
-</div>
-<fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-entree"><legend><span class="fieldset-legend">Por favor, si lo sabes, indica el color del vestido de la mujer</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-entree--entree">
- <div id="edit-submitted-label-entree-entree" class="form-radios"><div class="form-item form-type-radio form-item-submitted-label-entree-entree">
- <input type="radio" id="edit-submitted-label-entree-entree-1" name="submitted[label_entree][entree]" value="non-vegetarian" class="form-radio" />  <label class="option" for="edit-submitted-label-entree-entree-1">Non-Vegetarian </label>
-
-</div>
-<div class="form-item form-type-radio form-item-submitted-label-entree-entree">
- <input type="radio" id="edit-submitted-label-entree-entree-2" name="submitted[label_entree][entree]" value="vegetarian" class="form-radio" />  <label class="option" for="edit-submitted-label-entree-entree-2">Vegetarian </label>
-
-</div>
-</div>
+</div></div></fieldset>
+<fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-entree"><legend><span class="fieldset-legend">Color del vestido de la mujer?</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-entree--entree">
+ <input class="email form-text form-email required" type="text" id="color" value="" name="color" size="50" />
 </div>
 </div></fieldset>
-<fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-accommodations"><legend><span class="fieldset-legend">Please indicate anticipated accommodations:</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-accommodations--accommodations">
- <div id="edit-submitted-label-accommodations-accommodations" class="form-radios"><div class="form-item form-type-radio form-item-submitted-label-accommodations-accommodations">
- <input type="radio" id="edit-submitted-label-accommodations-accommodations-1" name="submitted[label_accommodations][accommodations]" value="theinn" class="form-radio" />  <label class="option" for="edit-submitted-label-accommodations-accommodations-1">The Inn at Rancho Santa Fe </label>
-
-</div>
-<div class="form-item form-type-radio form-item-submitted-label-accommodations-accommodations">
- <input type="radio" id="edit-submitted-label-accommodations-accommodations-2" name="submitted[label_accommodations][accommodations]" value="hilton" class="form-radio" />  <label class="option" for="edit-submitted-label-accommodations-accommodations-2">Hilton-Del Mar </label>
-
-</div>
-<div class="form-item form-type-radio form-item-submitted-label-accommodations-accommodations">
- <input type="radio" id="edit-submitted-label-accommodations-accommodations-3" name="submitted[label_accommodations][accommodations]" value="morganrun" class="form-radio" />  <label class="option" for="edit-submitted-label-accommodations-accommodations-3">Morgan Run </label>
-
-</div>
-<div class="form-item form-type-radio form-item-submitted-label-accommodations-accommodations">
- <input type="radio" id="edit-submitted-label-accommodations-accommodations-4" name="submitted[label_accommodations][accommodations]" value="other" class="form-radio" />  <label class="option" for="edit-submitted-label-accommodations-accommodations-4">Other </label>
-
-</div>
-</div>
+<fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-accommodations"><legend><span class="fieldset-legend">Talla calzado mujer?</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-accommodations--accommodations">
+	<input class="email form-text form-email required" type="text" id="talla" value="" name="talla" size="50" />
 </div>
 </div></fieldset>
 <div class="form-item webform-component webform-component-markup" id="webform-component-bg">
@@ -137,7 +111,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 </div>
 <div class="form-item webform-component webform-component-textarea" id="webform-component-message">
   <label for="edit-submitted-message">&nbsp; </label>
- <div class="form-textarea-wrapper"><textarea id="edit-submitted-message" name="submitted[message]" cols="10" rows="5" class="form-textarea"></textarea></div>
+ <div class="form-textarea-wrapper"><textarea id="edit-submitted-message" name="mensaje" cols="10" rows="5" class="form-textarea"></textarea></div>
  <div class="description">Send a message to the bride &amp; groom.</div>
 </div>
 <input type="hidden" name="details[sid]" value="" />
