@@ -21,7 +21,7 @@ $code=$_POST['code'];
 if (!empty($code)) {
 	//Comprobacion del envio del nombre de usuario y password
 	
-		$query = mysql_query("SELECT email,name,ID FROM users.boda WHERE code = '$code'") or die(mysql_error());
+		$query = mysql_query("SELECT email,name,ID FROM ".$dbname." WHERE code = '$code'") or die(mysql_error());
 		$data = mysql_fetch_array($query);
 		
 		if($data['email'] == null || $data['email'] == "") {

@@ -5,6 +5,7 @@ code varchar(25),
 email varchar(40),
 confirmed boolean,
 colorVestido varchar(50),
-tallaPie INTEGER,
+tallaPie decimal(2,2),
+message varchar(500),
 PRIMARY KEY (ID)
 );

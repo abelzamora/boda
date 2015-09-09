@@ -90,7 +90,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 </div>
  <fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-entree"><legend><span class="fieldset-legend">Dinos si vas a venir</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-entree--entree">
  <div id="edit-submitted-attendance" class="form-radios"><div class="form-item form-type-radio form-item-submitted-attendance">
- <input type="radio" id="voy" name="voy" value="voy" class="form-radio" />  <label class="option" for="voy">Si, voy a ir </label>
+ <input type="radio" id="voy" name="voy" value="voy" class="form-radio"/>  <label class="option" for="voy">Si, voy a ir </label>
 </div>
 <div class="form-item form-type-radio form-item-submitted-attendance">
  <input type="radio" id="noVoy" name="noVoy" value="noVoy" class="form-radio" />  <label class="option" for="noVoy">No, no voy a ir </label>
@@ -99,11 +99,11 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 </div>
 </div></div></fieldset>
 <fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-entree"><legend><span class="fieldset-legend">Color del vestido de la mujer?</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-entree--entree">
- <input class="email form-text form-email required" type="text" id="color" value="" name="color" size="50" />
+ <input class="email form-text form-email" type="text" id="color" value="" name="color" size="15" />
 </div>
 </div></fieldset>
 <fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-accommodations"><legend><span class="fieldset-legend">Talla calzado mujer?</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-accommodations--accommodations">
-	<input class="email form-text form-email required" type="text" id="talla" value="" name="talla" size="50" />
+	<input class="email form-text form-email" type="text" id="talla" value="" name="talla" size="4" autocomplete="off"/>
 </div>
 </div></fieldset>
 <div class="form-item webform-component webform-component-markup" id="webform-component-bg">
@@ -112,21 +112,11 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 <div class="form-item webform-component webform-component-textarea" id="webform-component-message">
   <label for="edit-submitted-message">&nbsp; </label>
  <div class="form-textarea-wrapper"><textarea id="edit-submitted-message" name="mensaje" cols="10" rows="5" class="form-textarea"></textarea></div>
- <div class="description">Send a message to the bride &amp; groom.</div>
+ <div class="description">Envianos tu mensaje!.</div>
 </div>
-<input type="hidden" name="details[sid]" value="" />
-<input type="hidden" name="details[page_num]" value="1" />
-<input type="hidden" name="details[page_count]" value="1" />
-<input type="hidden" name="details[finished]" value="0" />
-<input type="hidden" name="form_build_id" value="form-ptbER0FmJaYcif29bMcKbx0LZoWJ8gO7lDDUiCJ3CZE" />
-<input type="hidden" name="form_id" value="webform_client_form_1" />
+
 <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Submit" class="form-submit" /></div></div></form>  </div>
 
-  <div class="clearfix">
-          <div class="links"></div>
-    
-        
-  </div>
 
 </div>
   </div>

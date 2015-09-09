@@ -23,7 +23,7 @@
 			<?php 
 				if(isset($error)) echo $error;
 			?>
-					<input type="text" placeholder="codigo" name="code"><br>
+					<input type="text" placeholder="codigo" name="code" autocomplete="off"><br>
 					<input type="submit" value="Entrar">
 			</div>
 		</form>

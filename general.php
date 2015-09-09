@@ -39,19 +39,6 @@ if($_SESSION["logeado"] != "SI"){
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-<!--**************************************************************************************************
-http://scal.io -- check us out.
-   _____               __  _             _   _              ____                   _  _              
-  / ____|             / _|| |           | | | |            |  _ \                 | || |             
- | |      _ __  __ _ | |_ | |_  ___   __| | | |__   _   _  | |_) | _ __  __ _   __| || |  ___  _   _ 
- | |     | '__|/ _` ||  _|| __|/ _ \ / _` | | '_ \ | | | | |  _ < | '__|/ _` | / _` || | / _ \| | | |
- | |____ | |  | (_| || |  | |_|  __/| (_| | | |_) || |_| | | |_) || |  | (_| || (_| || ||  __/| |_| |
-  \_____||_|   \__,_||_|   \__|\___| \__,_| |_.__/  \__, | |____/ |_|   \__,_| \__,_||_| \___| \__, |
-                                                     __/ |                                      __/ |
-                                                    |___/                                      |___/ 
-http://scal.io -- check us out.
-****************************************************************************************************-->
-
         <div id="bg-image">
             <img src="img/bk.jpg" alt="bg" />
         </div>
@@ -338,9 +325,15 @@ http://scal.io -- check us out.
 		<script>
 		    function submitWindow() {
 		        // URL, name and attributes
-		        window.open('http://localhost:8888/wedding/rsvp.php','windowNew','width=500, height=700, scrollbars=yes');
+    			popupwindow('http://localhost:8888/wedding/rsvp.php','windowNew','500','700');
 		        return true;
 		    }
+
+		    function popupwindow(url, title, w, h) {
+		    	  var left = (screen.width/2)-(w/2);
+		    	  var top = (screen.height/2)-(h/2);
+		    	  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+		    	} 
 		</script>
 
     </body>
