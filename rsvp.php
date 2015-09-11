@@ -56,7 +56,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 //--><!]]>
 </script>
 </head>
-<body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-webform" >
+<body onload="resize();" class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-webform" >
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
   </div>
@@ -103,7 +103,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 </div>
 </div></fieldset>
 <fieldset class="webform-component-fieldset form-wrapper" id="webform-component-label-accommodations"><legend><span class="fieldset-legend">Talla calzado mujer?</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-label-accommodations--accommodations">
-	<input class="email form-text form-email" type="text" id="talla" value="" name="talla" size="4" autocomplete="off"/>
+	<input class="email form-text form-email" type="text" id="talla" value="" name="talla" size="10" autocomplete="off"/>
 </div>
 </div></fieldset>
 <div class="form-item webform-component webform-component-markup" id="webform-component-bg">
@@ -126,4 +126,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 
   </div>
   </body>
+  <script type="text/javascript">
+function resize(){
+	window.resizeTo(500, 700);
+	window.focus();
+}
+</script>
 </html>
