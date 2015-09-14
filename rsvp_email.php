@@ -46,13 +46,12 @@ $headers .= 'From: <confirmacion@abelymaria.com>' . "\r\n";
 $headers .= 'Cc: mariaza66@hotmail.com' . "\r\n";
 
 // Si entramos es que todo se ha realizado correctamente
-$link = mysql_connect ($dbhost, $dbusername, $dbuserpass);
 mysql_select_db($dbname,$link);
 
 $query_str = "UPDATE ".$dbname." SET name='{$_POST['name']}', email='{$_POST['email']}', colorVestido='{$_POST['color']}', confirmed='$asistencia', tallaPie='{$_POST['talla']}', message='{$_POST['mensaje']}' WHERE ID='{$_SESSION['ID']}'";
-$query = mysql_query($query_str,$link);
+$query = mysql_query($query_str);
 
-$my_error = mysql_error($link);
+$my_error = mysql_fetch_array($query);
 
 if(!empty($my_error)) {
 

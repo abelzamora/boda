@@ -325,7 +325,10 @@ if($_SESSION["logeado"] != "SI"){
 		<script>
 		    function submitWindow() {
 		        // URL, name and attributes
-    			popupwindow('http://localhost:8888/wedding/rsvp.php','windowNew','500','700');
+		        var link = window.location.origin;
+		        if(window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
+		        else link = link + '/rsvp.php';
+    			popupwindow(link,'windowNew','500','700');
 		        return true;
 		    }
 

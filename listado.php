@@ -23,17 +23,6 @@ table.db-table td       { padding:5px; border-left:1px solid #ccc; border-top:1p
 include('config.php');
 include('admin_links.php');
 
-/* connect to the db */
-mysql_connect ($dbhost, $dbusername, $dbuserpass);
-$link = mysqli_init();
-$success = mysqli_real_connect(
-		$link,
-		$host,
-		$user,
-		$password,
-		$db,
-		$port
-) or die('Error al seleccionar la base de datos');
 
 /* show tables */
 $query_str = "SELECT * FROM ".$dbname;
