@@ -53,7 +53,7 @@ if($_SESSION["logeado"] != "SI"){
                             <li><a href="#wedding">WEDDING</a></li>
                             <li><a href="#accomodations">ACCOMODATIONS</a></li>
                             <li><a href="#registry">REGISTRY</a></li>
-                            <li><a class="confirmacion" onClick="return submitWindow();">RSVP</a></li>
+                            <li><a onClick="return submitWindow();">RSVP</a></li>
                             <!--li><a href="http://sarahlovesbradley.tumblr.com" target="_blank">BLOG</a></li-->
                         </ul>
 

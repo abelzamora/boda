@@ -5,16 +5,11 @@ include('config.php');
 session_start();
 
 // Conectar a la base de datos
-mysql_connect ($dbhost, $dbusername, $dbuserpass);
-$link = mysqli_init();
-$success = mysqli_real_connect(
-		$link,
-		$host,
-		$user,
-		$password,
-		$db,
-		$port
-) or die('Error al seleccionar la base de datos');
+//mysql_connect ($dbhost, $dbusername, $dbuserpass);
+$link = mysql_connect($dbhost, $dbusername, $dbuserpass);
+if (!$link) {
+	die('Could not connect: ' . mysql_error());
+}
 //mysql_select_db($dbname) or die('No se puede seleccionar la base de datos a');
 
 $code=$_POST['code'];

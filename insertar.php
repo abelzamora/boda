@@ -46,5 +46,11 @@ include('config.php');
         exit;
     }
     
+
     
+   function sendEmail($nombre){
+   	$saludo = "";
+   	if(strpbrk($nombre))
+   	$message = "";
+   }
 ?>

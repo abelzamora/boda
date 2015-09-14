@@ -222,7 +222,7 @@ nav li a.selected {
     text-decoration: none;
     outline: none;
 }
-nav li a.confirmacion {
+ a.confirmacion {
     color: #aaaa;
     background: #gggggg;
     text-decoration: none;
