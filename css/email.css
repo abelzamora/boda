@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+@font-face {
+		   font-family: myFirstFont;
+		   src: url(http://abelymariacom.ipage.com/css/cssgenerateEmail.ttf);
+		}
+		
+		div {
+		   font-family: myFirstFont;
+		   font-size: xx-large;
+		   
+		}
+		body{
+			background-image: url("http://abelymariacom.ipage.com/img/wb.jpg");
+			background-repeat: no-repeat;
+		}

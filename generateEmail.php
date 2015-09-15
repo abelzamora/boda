@@ -32,42 +32,11 @@
 	}
 
 ?>
-<html>
-	<head>
-	<style> 
-		@font-face {
-		   font-family: myFirstFont;
-		   src: url(css/generateEmail.ttf);
-		}
-		
-		div {
-		   font-family: myFirstFont;
-		   font-size: xx-large;
-		}
-		body{
-			background-image: url("img/wb.jpg");
-			background-repeat: no-repeat;
-		}
-		</style>
-	</head>
-	<body>
-		<div align="center">
-		<br>
+<html><head><style type="text/css" media="all">@IMPORT url("css/email.css");</style></head>
+	<body><div align="center"><br>
 		<?php echo getName();?>
-		Se necesitan invitados con o sin experiencia para bodorrio porque...<br>
-		Nos Casamos!!!!<br>
-		Y como testigos nuestros que sois no podeis faltar.<br><br>
-		
-		Todos los detalles del bodorrio estan en la pagina web que hemos hecho.<br>
-		
+		Se necesitan invitados con o sin experiencia para bodorrio porque...<br>Nos Casamos!!!!<br>Y como testigos nuestros que sois no podeis faltar.<br><br>Todos los detalles del bodorrio estan en la pagina web que hemos hecho.<br>
+		<a href="http://abelymariacom.ipage.com/login.php">Enlace a la boda</a><br>
 		Para entrar, teneis que utilizar este codigo unico: <?php echo getCode();?>.
-		<br>Por favor, confirmad vuestra asistencia antes del XX.<br><br>
-		NO FALTEIS!!!<br>
-		
-		<a href="http://abelymariacom.ipage.com/login.php">Enlace a la boda</a><br><br>
-		
-		Muchos besos y abrazos.<br>
-		Abel y Maria.
-	</div>
-	</body>
-</html>
+		<br>Por favor, confirmad vuestra asistencia antes del XX.<br><br>NO FALTEIS!!!<br>Muchos besos y abrazos.<br>Abel y Maria.
+	</div></body></html>
