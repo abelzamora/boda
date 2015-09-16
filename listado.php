@@ -11,9 +11,26 @@ if($_SESSION["logeado_admin"] != "SI"){
 <head>
 <title>Formulario de Registro Invitados</title>
 <style type="text/css">
-table.db-table          { border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
-table.db-table th       { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-table.db-table td       { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.flat-table {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 115%;
+  overflow: auto;
+  width: auto;
+}  
+table.flat-table th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
+table.flat-table td {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 20px 30px;
+  }
 </style>
 </head>
 
@@ -30,8 +47,7 @@ $query = mysql_query($query_str) or die(mysql_error());
 
 if(isset($error)) echo $error;
 else if(isset($ok)) echo $ok;
-echo '<h3>',Asistentes,'</h3>';
-echo '<table class="db-table" cellpadding="0" cellspacing="0"><thead><tr><th>ID</th><th>Nombre</th><th>Email</th><th>Asiste</th><th>Color Vestido</th><th>Talla de Pie</th><th>Mensaje</th></tr></thead><tbody>';
+echo '<table class="flat-table"><tr><th>ID</th><th>Nombre</th><th>Email</th><th>Asiste</th><th>Color Vestido</th><th>Talla de Pie</th><th>Mensaje</th></tr><tbody>';
 
 while($data = mysql_fetch_array($query)){
 	echo '<tr>';
@@ -54,8 +70,5 @@ function asistencia($asistencia){
 	else return "<td>SI</td>";
 }
 ?>
-<form name="form1" method="post" action="registro.php">
-	<input type="submit" name="Submit" value="Dar de alta">
-</form>
 
 </body>

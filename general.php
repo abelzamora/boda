@@ -15,8 +15,8 @@ if($_SESSION["logeado"] != "SI"){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>M&A Boda</title>
-        <meta name="description" content="Welcome to the wedding website for Sarah and Brad's Big Day!">
+        <title>M&amp;A Boda</title>
+        <meta name="description" content="Bienvenido a la pagina web de la boda de Abel y Maria!">
 
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
@@ -33,6 +33,24 @@ if($_SESSION["logeado"] != "SI"){
         <link rel="stylesheet" href="css/main-1.6.css">
 
         <script src="js/script.js"></script>
+        <script src="js/main-1.6.js"></script>
+        
+		<script>
+		    function submitWindow() {
+		        // URL, name and attributes
+		        var link = window.location.origin;
+		        if(window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
+		        else link = link + '/rsvp.php';
+    			popupwindow(link,'windowNew','500','700');
+		        return true;
+		    }
+
+		    function popupwindow(url, title, w, h) {
+		    	  var left = (screen.width/2)-(w/2);
+		    	  var top = (screen.height/2)-(h/2);
+		    	  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+		    	} 
+		</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -71,7 +89,7 @@ if($_SESSION["logeado"] != "SI"){
                                 <span class="amp">&amp;</span> 
                                 ABEL
                             </span>
-                            <div class="date">Agosto 6<sup>th</sup>, 2016, Zamora, Espana</div>
+                            <div class="date">6 de Agosto, 2016, Zamora, Espana</div>
                         </div>
                     </header>
 
@@ -83,7 +101,7 @@ if($_SESSION["logeado"] != "SI"){
                                 
                         <div class="column left">
 
-                            <h2>SARAH</h2>
+                            <h2>Maria</h2>
                             <p>
                                 <img src="img/sarahThumb.jpg" class="thumb" alt="Sarah" />
                                 Sarah is most thankful to her parents for the gift of two loving big brothers &amp; five amazing role-model sisters. As the second-youngest, Sarah spent her childhood twirling &amp; dancing around, putting on talent shows for her parents &amp; grandparents. Her creative spirit and eye for design was established at a young age, as she highly disapproved of Mattel’s © furnishings and décor within her Barbie House. If Barbie needed an interior makeover (which was frequent) Sarah looked through Sunday newspaper ads &amp; IKEA magazines for inspiration, drew the new contents by hand and placed them as backdrops in the Barbie house. After graduation from Mater Dei High School, Sarah explored the metropolitan life in San Francisco and graduated with a BS in Interior Design from San Francisco State University. Sarah is adding to her vows that she will forever allow a one-room “man-den” with it’s contents and décor subject to Bradley’s discretion.</p>
@@ -91,7 +109,7 @@ if($_SESSION["logeado"] != "SI"){
                         </div><!--end column-->
                         <div class="column right">
 
-                            <h2>BRADLEY</h2>
+                            <h2>Abel</h2>
                             <p>
                                 <img src="img/bradThumb.jpg" class="thumb" alt="Brad" />
                                 Born in Mission Viejo, California, Bradley spent half of his life living with his mother in San Diego and half with his wonderful Wisconsin family. Bradley grew up playing ice hockey while secretly learning how to build computers. Half jock, half nerd, he has cultivated these interests well into his adult life, that make him who he is today. After his graduation from the University of San Francisco with a degree in Information Systems, Bradley worked for Yahoo! for seven years, and continued to explore the tech startup scene in  San Francisco. With an entrepreneurial spirit and passion for technology, Bradley now runs his own software company, Scal.io, building hand-crafted mobile,  web, and desktop apps for tech companies in the Silicon Valley and beyond. Bradley is adding to his vows a lifetime IT guarantee to Sarah, that he will be readily available 24/7 to troubleshoot... anything &amp; everything technical.</p>
@@ -147,16 +165,14 @@ if($_SESSION["logeado"] != "SI"){
 
                         </div><!--end column--> 
                         <div class="column right">
-                            <h2>SCHEDULE OF EVENTS</h2>
+                            <h2>Horarios de los eventos</h2>
                             <p>
-                                Rehearsal Dinner <br />
-                                Thursday, September 5th at 8pm<br /><br />
-                                Golf <br />
-                                Friday, September 6th at 9am<br /><br />
-                                Ceremony <br />
-                                Friday, September 6th at 6pm (reception to follow)<br /><br />
-                                Breakfast &amp; Bocce <br />
-                                Saturday, September 7th at 10am<br />
+                                Ceremonia religiosa <br />
+                                Sabado, 6 de Agosto a las 18:00<br /><br />
+                                Banquete <br />
+                                Sabado, 6 de Agosto a las 20:00<br /><br />
+                                Discoteca <br />
+                                Sabado, 6 de Agosoto a las 23:59<br /><br />
                             </p>
                         </div><!--end column--> 
 
@@ -205,27 +221,14 @@ if($_SESSION["logeado"] != "SI"){
 
                         <div class="column left">
 
-                            <h2>HOTELS</h2>
+                            <h2>HOTEL</h2>
                             <p>
-                                (At the venue) <br />
-                                The Inn at Rancho Santa Fe <br />
-                                5951 Linea Del Cielo <br />
-                                Rancho Santa Fe, CA 92067 <br />
-                                <a href="tel:1-858-756-1131">(858) 756-1131</a> <br />
-                                $279 <br /> 
-                                - <br />
-                                Morgan Run Resort &amp; Club (1.9 miles away) <br />
-                                5690 Cancha De Golf <br />
-                                Rancho Santa Fe, CA 92091 <br />
-                                <a href="tel:1-866-599-6674">(866) 599-6674</a> <br />
-                                $90 <br />
-                                - <br />
-                                (Closer to the beach) <br />
-                                Courtyard San Diego Solana Beach/Del Mar (4.5 miles away) <br />
-                                717 S Hwy 101 <br />
-                                Solana Beach, CA <br />
-                                <a href="tel:1-858-792-8200">(858) 792-8200</a> <br />
-                                $109 <br />
+                                AC Hotel Zamora <br />
+                                Avda Principe de Asturias, 43 <br />
+                                49029 <br />
+                                Zamora, Espana <br />
+                                <a href="http://www.marriott.com/hotels/travel/slmza-ac-hotel-zamora/">AC Hotel Zamora</a> <br />
+                                54 EUR <br /> 
                             </p>
                         </div><!--end column-->
 
@@ -319,25 +322,5 @@ if($_SESSION["logeado"] != "SI"){
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
         </div> <!-- #bg-container -->
-
-        <script src="js/main-1.6.js"></script>
-        
-		<script>
-		    function submitWindow() {
-		        // URL, name and attributes
-		        var link = window.location.origin;
-		        if(window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
-		        else link = link + '/rsvp.php';
-    			popupwindow(link,'windowNew','500','700');
-		        return true;
-		    }
-
-		    function popupwindow(url, title, w, h) {
-		    	  var left = (screen.width/2)-(w/2);
-		    	  var top = (screen.height/2)-(h/2);
-		    	  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-		    	} 
-		</script>
-
     </body>
 </html>

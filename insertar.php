@@ -1,14 +1,8 @@
 <?php
 include('config.php');
-    // Primero comprobamos que ning�n campo est� vac�o y que todos los campos existan.
     if(isset($_POST['name']) && !empty($_POST['name']) &&
     isset($_POST['code']) && !empty($_POST['code']) &&
-    isset ($_POST['email']) && !empty($_POST['email'])) {
-
-        // Si entramos es que todo se ha realizado correctamente
-        $link = mysql_connect ($dbhost, $dbusername, $dbuserpass);
-        mysql_select_db($dbname,$link);
-        
+    isset ($_POST['email']) && !empty($_POST['email'])) {        
         //Comprobamos que el usuario no este dado de alta
         $query = mysql_query("SELECT email FROM ".$dbname." WHERE email = '{$_POST['email']}'") or die(mysql_error());
         $data = mysql_fetch_array($query);
@@ -69,8 +63,8 @@ include('config.php');
    		$message .= '<br>Por favor, confirmad vuestra asistencia antes del XX.<br><br>NO FALTEIS!!!<br>Muchos besos y abrazos.<br>Abel y Maria.';
    		$message .= '</div></body></html>';
    		
-   		$to = "mevsmyself@gmail.com";
-   		$subject = "Invitacion boda Abel y Maria 2016";
+   		$to = $_POST['email'];
+   		$subject = "Invitacion boda Maria y Abel 2016";
    		
    		// Always set content-type when sending HTML email
    		$headers = "MIME-Version: 1.0" . "\r\n";
@@ -78,7 +72,7 @@ include('config.php');
    		
    		// More headers
    		$headers .= 'From: <confirmacion@abelymaria.com>' . "\r\n";
-   		$headers .= 'Cc: mariaza66@hotmail.com' . "\r\n";
+   		$headers .= 'Cc: mariaza66@hotmail.com, mevsmyself@gmail.com' . "\r\n";
    		
    		
    		
