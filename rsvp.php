@@ -126,6 +126,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/d\/","pathPrefix":"","ajaxPageStat
 
   </div>
   </body>
+  <?php include_once("analyticstracking.php") ?>
   <script type="text/javascript">
 function resize(){
 	window.resizeTo(500, 700);

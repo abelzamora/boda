@@ -73,7 +73,7 @@ input[type="submit"] {
 }
 
 #login-form h3 {
-  background-color: #282830;
+  background-color: rgb(112, 196, 105);
   border-radius: 5px 5px 0 0;
   color: #fff;
   font-size: 14px;
@@ -124,7 +124,7 @@ input[type="submit"] {
 }
 
 #login-form input[type="submit"] {
-  background: #1dabb8;
+  background: rgb(112, 196, 105);
   border-radius: 3px;
   color: #fff;
   float: right;
@@ -134,7 +134,7 @@ input[type="submit"] {
 }
 
 #login-form input[type="submit"]:hover {
-  background: #198d98;
+  background: rgb(112, 196, 105);
 }
 
 #login-form footer {

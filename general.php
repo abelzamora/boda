@@ -67,12 +67,10 @@ if($_SESSION["logeado"] != "SI"){
                 <div id="heading" class="wrapper clearfix">
                     <nav id="nav">
                         <ul>
-                            <li><a href="#brideandgroom">THE BRIDE &amp; GROOM</a></li>
-                            <li><a href="#wedding">WEDDING</a></li>
-                            <li><a href="#accomodations">ACCOMODATIONS</a></li>
-                            <li><a href="#registry">REGISTRY</a></li>
-                            <li><a onClick="return submitWindow();">RSVP</a></li>
-                            <!--li><a href="http://sarahlovesbradley.tumblr.com" target="_blank">BLOG</a></li-->
+                            <li><a href="#ceremonia">Ceremonia</a></li>
+                            <li><a href="#wedding">Banquete &amp; Discoteca</a></li>
+                            <li><a href="#accomodations">Alojamiento</a></li>
+                            <li><a onClick="return submitWindow();">Confirmaciones</a></li>
                         </ul>
 
                     </nav>
@@ -95,9 +93,9 @@ if($_SESSION["logeado"] != "SI"){
 
                     <div class="clearfix"></div>
 
-                    <section id="brideandgroom" class="clearfix">
+                    <section id="ceremonia" class="clearfix">
 
-                        <h1>The Bride and Groom</h1>
+                        <h1>Santa Maria de la Horta</h1>
                                 
                         <div class="column left">
 
@@ -147,16 +145,15 @@ if($_SESSION["logeado"] != "SI"){
 
                     <section id="wedding" class="clearfix">
 
-                        <h1>Wedding</h1>
+                        <h1>Banquete &amp; Discoteca</h1>
 
                         <div class="column left">
-                            <h2>CEREMONY</h2>
+                            <h2>Finca Maradela</h2>
                             <p>
-                                The Inn at Rancho Santa Fe <br />
-                                Rancho Santa Fe, California <br /><br />
-                                Friday, September 6, 2013 <br />
-                                6:00 PM at the Croquet Lawn <br /><br />
-                                *Adult reception to follow <br /><br /><br />
+                                Maradela, tierra de restos romanos, de manantiales de estanques y de leyendas. Se cuenta que aqui tuvo lugar la famosa batalla de Toro <br />
+                                que logro asegurar el trono de Castilla a Isabel y Fernando <br /><br />
+                                Fue poseedora de un monasterio en el Siglo XII. Albergo un palacio, vinedos, olivos y una extensa variedad de arboles frutales que aun hoy engalanan sus bellos rincones<br /><br />
+                                Cuenta ademas con visitantes ilustres como Felipe III y su valido el Duque de Lerma.<br /><br />
 
                                 <img src="img/theinn-large.png" class="theinn" alt="The Inn at Rancho Santa Fe" />
                             </p>
@@ -323,4 +320,5 @@ if($_SESSION["logeado"] != "SI"){
             </div> <!-- #main-container -->
         </div> <!-- #bg-container -->
     </body>
+    <?php include_once("analyticstracking.php") ?>
 </html>

@@ -31,6 +31,21 @@ table.flat-table td {
     color: rgb(111, 111, 111);
     padding: 20px 30px;
   }
+input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    background-color: rgb(112, 196, 105);
+    border: 1px solid rgb(112, 196, 105);
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 </style>
 </head>
 
@@ -42,7 +57,7 @@ include('admin_links.php');
 
 
 /* show tables */
-$query_str = "SELECT * FROM ".$dbname;
+$query_str = "SELECT * FROM ".$dbname. " order by ID";
 $query = mysql_query($query_str) or die(mysql_error());
 
 if(isset($error)) echo $error;
@@ -71,4 +86,10 @@ function asistencia($asistencia){
 }
 ?>
 
+<form name="form1" method="post" action="listado_export.php">
+	<input type="submit" name="submit" value="Generar Excel">
+</form>
+
 </body>
+<?php include_once("analyticstracking.php") ?>
+</html>

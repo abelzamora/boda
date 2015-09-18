@@ -84,11 +84,11 @@ include('admin_links.php');
 }
 .form-style-8 input[type="button"], 
 .form-style-8 input[type="submit"]{
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    background-color: #2CBBBB;
-    border: 1px solid #27A0A0;
+    -moz-box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    box-shadow: inset 0px 1px 0px 0px rgb(112, 196, 105);
+    background-color: rgb(112, 196, 105);
+    border: 1px solid rgb(112, 196, 105);
     display: inline-block;
     cursor: pointer;
     color: #FFFFFF;
@@ -111,26 +111,18 @@ include('admin_links.php');
 <form name="form1" method="post" action="insertar.php">
 <div class="form-style-8">
   Nombre:<br>
-  <label>
   <input name="name" type="text" id="name" autocomplete="off" autofocus="autofocus" value="<?php echo $_POST['name'];?>">
-  </label>
   <p>Codigo:<br>
-    <label>
       <input name="code" type="text" id="code" value="<?php echo generateRandomString();?>" autocomplete="off">
-    </label>
   </p>
   <p>Email:<br>
-    <label>
       <input name="email" type="email" id="email" autocomplete="off" value="<?php echo $_POST['email'];?>">
-    </label>
   </p>
   <p>
-    <label></label>
-    <label>
     <input type="submit" name="Submit" value="Enviar Registro">
-    </label>
   </p>
   </div>
 </form>
 </body>
+<?php include_once("analyticstracking.php") ?>
 </html>
