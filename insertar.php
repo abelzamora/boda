@@ -41,7 +41,6 @@ include('config.php');
     }
   
     function getName(){
-    	$str = "";
     	if (strpos($_POST['name'],' y ') !== false) {
     		$str = "Queridos ".$_POST['name'].",<br>";
     	}else{
@@ -71,7 +70,7 @@ include('config.php');
    		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
    		
    		// More headers
-   		$headers .= 'From: <confirmacion@abelymaria.com>' . "\r\n";
+   		$headers .= 'From: <info@abelymariacom.ipage.com>' . "\r\n";
    		$headers .= 'Cc: mariaza66@hotmail.com, mevsmyself@gmail.com' . "\r\n";
    		
    		

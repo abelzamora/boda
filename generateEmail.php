@@ -18,8 +18,7 @@
 			$query_str = "SELECT name FROM ".$dbname." WHERE ID = {$_GET['id']}";
 			$query = mysql_query($query_str) or die(mysql_error());
 			$data = mysql_fetch_array($query);
-			
-			$str = "";
+
 			if (strpos($data['name'],' y ') !== false) {
 				$str = "Queridos ".$data['name'].",<br>";
 			}else{

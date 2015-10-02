@@ -42,9 +42,9 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$to = "mevsmyself@gmail.com";
-$headers .= 'From: <confirmacion@abelymaria.com>' . "\r\n";
-$headers .= 'Cc: mariaza66@hotmail.com' . "\r\n";
+$to = $email_boda;
+$headers .= 'From: <info@abelymariacom.ipage.com>' . "\r\n";
+$headers .= 'Cc: mariaza66@hotmail.com,mevsmyself@gmail.com' . "\r\n";
 
 // Si entramos es que todo se ha realizado correctamente
 mysql_select_db($dbname,$link);

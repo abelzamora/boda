@@ -222,12 +222,6 @@ nav li a.selected {
     text-decoration: none;
     outline: none;
 }
- a.confirmacion {
-    color: #aaaa;
-    background: #gggggg;
-    text-decoration: none;
-    outline: none;
-}
 
 /** firefox remove outline **/
 nav ul li a:focus {outline:none;}
