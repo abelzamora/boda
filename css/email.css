@@ -1,27 +1,26 @@
 @CHARSET "UTF-8";
 @font-face {
-		   font-family: myFirstFont;
-		   src: url(http://abelymariacom.ipage.com/css/generateEmail.ttf);
-		}
-		
-		div {
-		   font-family: myFirstFont;
-		   font-size: xx-large;
-		   
-		}
-		body{
-			background: 
-radial-gradient(circle closest-side at 60% 43%, #F8F8F8  26%, rgba(0,0,0,0) 27%),
-radial-gradient(circle closest-side at 40% 43%, #F8F8F8  26%, rgba(0,0,0,0) 27%),
-radial-gradient(circle closest-side at 40% 22%, #E0E0E0  45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 60% 22%, #E0E0E0  45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 50% 35%, #E0E0E0  30%, rgba(221,51,85,0) 31%),
+    font-family: myFirstFont;
+    src: url(http://abelymariacom.ipage.com/css/generateEmail.ttf);
+}
 
-radial-gradient(circle closest-side at 60% 43%, #F8F8F8  26%, rgba(0,0,0,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 43%, #F8F8F8  26%, rgba(187,0,51,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 22%, #E0E0E0  45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 60% 22%, #E0E0E0  45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 50% 35%, #E0E0E0  30%, rgba(221,51,85,0) 31%) 50px 50px;
-background-color:#F8F8F8;
-background-size:100px 100px;
-		}
+div {
+    font-family: myFirstFont;
+    font-size: xx-large;
+
+}
+
+body {
+    background: radial-gradient(circle closest-side at 60% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%),
+    radial-gradient(circle closest-side at 40% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%),
+    radial-gradient(circle closest-side at 40% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%),
+    radial-gradient(circle closest-side at 60% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%),
+    radial-gradient(circle closest-side at 50% 35%, #E0E0E0 30%, rgba(221, 51, 85, 0) 31%),
+    radial-gradient(circle closest-side at 60% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 43%, #F8F8F8 26%, rgba(187, 0, 51, 0) 27%) 50px 50px,
+    radial-gradient(circle closest-side at 40% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 60% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%) 50px 50px,
+    radial-gradient(circle closest-side at 50% 35%, #E0E0E0 30%, rgba(221, 51, 85, 0) 31%) 50px 50px;
+    background-color: #F8F8F8;
+    background-size: 100px 100px;
+}
