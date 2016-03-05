@@ -2601,13 +2601,7 @@
     })
 })(window);
 
-/**
- * Copyright (c) 2007-2012 Ariel Flesler - jQuery ScrollTo
- * Dual licensed under MIT and GPL.
- * @author Ariel Flesler
- * @version 1.4.3.1
- */
-;(function ($) {
+(function ($) {
     var h = $.scrollTo = function (a, b, c) {
         $(window).scrollTo(a, b, c)
     };
@@ -2930,7 +2924,7 @@
             }
 
             function f() {
-                var t = new Object;
+                var t = {};
                 s.find("source").each(function () {
                     var n, r, i;
                     n = e(this).attr("media");
@@ -2945,7 +2939,7 @@
             }
 
             function l() {
-                var t = new Object, n = s.data();
+                var t = {}, n = s.data();
                 e.each(n, function (e, n) {
                     var r;
                     r = e.replace(/[^\d.]/g, "");
@@ -2958,7 +2952,7 @@
                 } else s.find("img").attr("src", t[i])
             }
 
-            var t = new Array, n, i, s, o, u = 1;
+            var t = [], n, i, s, o, u = 1;
             !r.ignorePixelRatio && window.devicePixelRatio !== undefined && (u = window.devicePixelRatio);
             s = e(this);
             a(!0);
