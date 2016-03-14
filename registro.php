@@ -27,6 +27,7 @@ else if (isset($ok)) echo $ok;
 
 <html>
 <head>
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <title>Formulario de Registro Invitados</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <style type="text/css">

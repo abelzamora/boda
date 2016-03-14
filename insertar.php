@@ -73,7 +73,7 @@ function sendEmail()
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: <info@abelymariacom.ipage.com>' . "\r\n";
+    $headers .= 'From: <invitaciones@abelymariacom.ipage.com>' . "\r\n";
     $headers .= 'Cc: mariaza66@hotmail.com, mevsmyself@gmail.com' . "\r\n";
 
 

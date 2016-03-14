@@ -17,7 +17,7 @@ if ($_SESSION["logeado"] != "SI") {
 <html class="no-js"> <!--<![endif]-->
 
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="http://sarahlovesbradley.com/d/sites/default/files/favicon.ico"
           type="image/vnd.microsoft.icon"/>
     <meta content="width=720; maximum-scale=1.0;" name="viewport"/>

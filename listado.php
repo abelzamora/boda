@@ -9,6 +9,7 @@ if ($_SESSION["logeado_admin"] != "SI") {
 <!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <title>Formulario de Registro Invitados</title>
     <style type="text/css">
         table.flat-table {

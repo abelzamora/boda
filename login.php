@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <title>Maria & Abel</title>
     <link rel="stylesheet" href="css/login_style.css">
     <script src="js/login_prefixfree.min.js"></script>
@@ -23,13 +23,16 @@
         <?php
         if (isset($error)) echo $error;
         ?>
-        <input type="text" placeholder="codigo" name="code" autocomplete="off"><br>
+        <input type="text" placeholder="codigo" name="code" autocomplete="off"></br>
         <input type="submit" value="Entrar">
     </div>
 </form>
-<script src='js/login_jquery.js'></script>
+
 
 
 </body>
+<footer>
+    <script src='js/login_jquery.js'></script>
+</footer>
 <?php include_once("analyticstracking.php") ?>
 </html>

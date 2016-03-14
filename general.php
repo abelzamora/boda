@@ -22,7 +22,7 @@ if ($_SESSION["logeado"] != "SI") {
     <title>M&amp;A Boda</title>
     <meta name="description" content="Bienvenido a la pagina web de la boda de Abel y Maria!">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
 
     <!-- For iPhone 4 with high-resolution Retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
@@ -36,25 +36,7 @@ if ($_SESSION["logeado"] != "SI") {
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main-1.6.css">
 
-    <script src="js/script.js"></script>
-    <script src="js/main-1.6.js"></script>
 
-    <script>
-        function submitWindow() {
-            // URL, name and attributes
-            var link = window.location.origin;
-            if (window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
-            else link = link + '/rsvp.php';
-            popupwindow(link, 'windowNew', '500', '700');
-            return true;
-        }
-
-        function popupwindow(url, title, w, h) {
-            var left = (screen.width / 2) - (w / 2);
-            var top = (screen.height / 2) - (h / 2);
-            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-        }
-    </script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -76,7 +58,7 @@ if ($_SESSION["logeado"] != "SI") {
                     <li><a href="#ceremonia">Ceremonia</a></li>
                     <li><a href="#wedding">Banquete &amp; Discoteca</a></li>
                     <li><a href="#accomodations">Alojamiento</a></li>
-                    <li><a onClick="return submitWindow();">Confirmaciones</a></li>
+                    <li><a href="#confirmaciones" onClick="return submitWindow();">Confirmaciones</a></li>
                 </ul>
 
             </nav>
@@ -117,11 +99,16 @@ if ($_SESSION["logeado"] != "SI") {
                 </div><!--end column-->
                 <div class="column right">
                     <h2>Horarios de los eventos</h2>
-
                     <p>
                         Ceremonia religiosa <br/>
                         Sabado, 6 de Agosto a las 18:00<br/><br/>
                     </p>
+
+                    <h2>Direccion</h2>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.6966990285855!2d-5.746663885068915!3d41.50141869688208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta!5e1!3m2!1sen!2ses!4v1457210298125&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <br/>
+                    </div>
                 </div><!--end column-->
 
                 <div class="clearfix"></div>
@@ -131,11 +118,7 @@ if ($_SESSION["logeado"] != "SI") {
                     <div class="hr-b"></div>
                 </div>
 
-                <h2>Mapa Iglesia</h2>
-                <div id="gmap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.6966990285855!2d-5.746663885068915!3d41.50141869688208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta!5e1!3m2!1sen!2ses!4v1457210298125" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <br/>
-                </div>
+
 
 
             </section>
@@ -176,6 +159,14 @@ if ($_SESSION["logeado"] != "SI") {
                     <p>
                         <a href="http://www.fincamaradela.com" target="	_blank">Finca Maradela</a>
                     </p>
+
+                    <h2>Direccion</h2>
+                    <div id="gmap">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2298.0725627587585!2d-5.50511274727613!3d41.488147370420215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI5JzE3LjMiTiA1wrAzMCcxMS44Ilc!5e1!3m2!1sen!2ses!4v1457206245199&amp;output=embed" frameborder="0"></iframe>
+                        <br/>
+                    </div>
+
                 </div><!--end column-->
 
                 <div class="clearfix"></div>
@@ -185,12 +176,7 @@ if ($_SESSION["logeado"] != "SI") {
                     <div class="hr-b"></div>
                 </div>
 
-                <h2>Mapa Maradela</h2>
-                    <div id="gmap">
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2298.0725627587585!2d-5.50511274727613!3d41.488147370420215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI5JzE3LjMiTiA1wrAzMCcxMS44Ilc!5e1!3m2!1sen!2ses!4v1457206245199&amp;output=embed"></iframe>
-                        <br/>
-                    </div>
             </section>
 
             <section id="accomodations" class="clearfix">
@@ -249,28 +235,37 @@ if ($_SESSION["logeado"] != "SI") {
                     <p>
                     Iglesia Santa Maria de la Horta - Finca Maradela
                     </p>
+                    <p>
+                        Al terminar la ceremonia religiosa tienes dos opciones para llegar hasta la Finca Maradela, una es con tu propio coche o la otra es utilizar uno de los autobuses que tendras a tu disposcion.
+                    </p>
+                    <br/>
+                    <p>
+                        Con tu coche:
+                    </p>
                     <div id="gmap">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d87252.54632128075!2d-5.694474196984075!3d41.520558333184276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta!3m2!1d41.5014147!2d-5.7444752!4m3!3m2!1d41.488138899999996!2d-5.503277799999999!5e1!3m2!1sen!2ses!4v1457206703909" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-
+                    <p>
+                        Con el autobus: el autobus os estara esperando en la direccion que puedes encontrar en el mapa de abajo
+                    </p>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1368.8470258715656!2d-5.746043847313712!3d41.50109616113351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d41.500616699999995!2d-5.7457706!4m5!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta%2C+49002+Zamora!3m2!1d41.5014147!2d-5.7444752!5e1!3m2!1sen!2ses!4v1457222227492" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div><!--end column-->
 
             </section>
 
-            <section id="registry" class="clearfix">
+            <section id="confirmaciones" class="clearfix">
 
-                <h1>Registry</h1>
+                <h1>Confirmaciones</h1>
 
                 <div class="column full">
 
-                    <p>Due to the nature of city life (not a great deal of storage space), we have decided to embrace
-                        the HONEYMOON REGISTRY site. However, if your prefer the traditional route, we are registered at
-                        Williams Sonoma, Sur La Table, &amp; Macy's. A link for the registry sites will be coming
-                        soon!</p>
+                    <p>Para confirmar tu asistencia, tienes varias opciones. Puedes mandar un correo electronico a esta direccion o puedes hacer click en este enlace <a onClick="return submitWindow();">(Confirmaciones)</a> y decirnos si vas a venir :) </p>
 
                     <p>
-                        LOVE NOTES FOR SARAH &amp; BRADLEY <br/>
-                        Email us at ... <br/>
+                        Te esperamos el 6 de agosto! <br/>
+                        No nos faltes!!! <br/>
                     </p>
 
                 </div><!--end column-->
@@ -283,5 +278,26 @@ if ($_SESSION["logeado"] != "SI") {
     </div> <!-- #main-container -->
 </div> <!-- #bg-container -->
 </body>
+<footer>
+    <script src="js/script.js"></script>
+    <script src="js/main-1.6.js"></script>
+
+    <script>
+        function submitWindow() {
+            // URL, name and attributes
+            var link = window.location.origin;
+            if (window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
+            else link = link + '/rsvp.php';
+            popupwindow(link, 'windowNew', '500', '700');
+            return true;
+        }
+
+        function popupwindow(url, title, w, h) {
+            var left = (screen.width / 2) - (w / 2);
+            var top = (screen.height / 2) - (h / 2);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        }
+    </script>
+</footer>
 <?php include_once("analyticstracking.php") ?>
 </html>
