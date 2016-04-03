@@ -2,6 +2,8 @@ Options +FollowSymlinks
 RewriteEngine on
 RewriteRule ^(.*)\.htm$ $1.php [nc]
 
+AddDefaultCharset utf-8
+
 # compress text, html, javascript, css, xml:
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html

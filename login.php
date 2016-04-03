@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <title>Maria & Abel</title>
     <link rel="stylesheet" href="css/login_style.css">
+    <link rel="shortcut icon" href="img/novios.png" type="image/png">
     <script src="js/login_prefixfree.min.js"></script>
 
 

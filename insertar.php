@@ -49,24 +49,29 @@ function getName()
         $str = "Querido " . $_POST['name'] . ",<br>";
     }
 
+    $str .= "Se necesitan invitados con o sin experiencia para bodorrio porque...<br>Nos Casamos!!!!<br>Y como testigos nuestros que sois no podeis faltar.<br><br>Todos los detalles del bodorrio estan en la página web que hemos hecho.<br><a href=\"http://www.abelymaria.com\">Enlace a la boda</a><br>";
+
+    return $str;
+}
+
+function getCode()
+{
+    $str = "Para entrar, tenéis que utilizar este código generado sólo para tí: " . $_POST['code'] . ".<br>";
+    $str .= "Por favor, confirmad vuestra asistencia antes del 15-07-2016.<br><br>NO FALTÉIS!!!<br>Muchos besos y abrazos.<br>Abel y María.";
     return $str;
 }
 
 
 function sendEmail()
 {
-    $message = '<html><head><style type="text/css" media="all">@IMPORT url("http://abelymariacom.ipage.com/css/email.css");</style></head>';
-    $message .= '<body><div align="center"><br>';
-    $message .= getName();
-    $message .= 'Se necesitan invitados con o sin experiencia para bodorrio porque...<br>Nos Casamos!!!!<br>Y como testigos nuestros que sois no podeis faltar.<br><br>Todos los detalles del bodorrio estan en la pagina web que hemos hecho.<br>';
-    $message .= '<a href="http://abelymariacom.ipage.com/login.php">Enlace a la boda</a><br>';
-    $message .= 'Para entrar, teneis que utilizar este codigo unico: ';
-    $message .= $_POST['code'] . '.';
-    $message .= '<br>Por favor, confirmad vuestra asistencia antes del XX.<br><br>NO FALTEIS!!!<br>Muchos besos y abrazos.<br>Abel y Maria.';
+    $message = '<html><head><style type="text/css" media="all">div { font-family: sans-serif; }  body {  background: radial-gradient(circle closest-side at 60% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #E0E0E0 30%, rgba(221, 51, 85, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #F8F8F8 26%, rgba(0, 0, 0, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #F8F8F8 26%, rgba(187, 0, 51, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #E0E0E0 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #E0E0E0 30%, rgba(221, 51, 85, 0) 31%) 50px 50px; background-color: #F8F8F8; background-size: 100px 100px;  }</style></head>';
+    $message .= '<body style="background-color:#F8F8F8;background-image:none;background-repeat:repeat;background-position:60% 43%;background-attachment:scroll;background-size:100px 100px;" ><div align="center" style="font-family:cursive;font-size:xx-large;" ><br>';
+    $message .=  getName();
+    $message .=  getCode() ;
     $message .= '</div></body></html>';
 
     $to = $_POST['email'];
-    $subject = "Invitacion boda Maria y Abel 2016";
+    $subject = "Invitación boda María y Abel 2016";
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
