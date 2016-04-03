@@ -140,7 +140,7 @@ if ($_SESSION["logeado"] != "SI") {
                         extensa variedad de arboles frutales que aun hoy engalanan sus bellos rincones<br/><br/>
                         Cuenta ademas con visitantes ilustres como Felipe III y su valido el Duque de Lerma.<br/><br/>
 
-                        <img src="img/logoMaradela.png" class="theinn" alt="The Inn at Rancho Santa Fe"/>
+                        <img src="img/logoMaradela.png" class="theinn" alt="Maradela"/>
 
                     </p>
 
@@ -273,20 +273,21 @@ if ($_SESSION["logeado"] != "SI") {
 
             <section id="invitacion" class="clearfix">
                 <h1>Invitación Tradicional</h1>
-
-                <p>
-                    Las invitaciones tradicionales fueron hechas por la Fundación Personas, nos gustaría dar a conocer la gran labor que realizan día tras día.
-                </p>
+                <div class="column full" >
+                    <p>
+                        Las invitaciones tradicionales fueron hechas por la Fundación Personas, nos gustaría dar a conocer la gran labor que realizan día tras día.
+                    </p>
+                 </div>
 
                 <div class="column left">
-                    <img src="img/fundacionPersonas1.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/>
+                    <p><img src="img/fundacionPersonas1.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/></p>
                 </div>
                 <div class="column right">
-                    <img src="img/fundacionPersonas2.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/>
+                    <p><img src="img/fundacionPersonas2.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/></p>
                 </div>
-                <div class="column full">
-                    <img src="http://www.fundacionpersonas.org/landing/wp-content/uploads/2015/05/FP.jpg" onclick="http://www.fundacionpersonas.org/landing/"><br>
-                    <a href="http://www.fundacionpersonas.org/landing/" target="_blank">Fundación Personas</a></br>
+                <div class="column full" >
+                    <p><img src="http://www.fundacionpersonas.org/landing/wp-content/uploads/2015/05/FP.jpg" onclick="http://www.fundacionpersonas.org/landing/"><br>
+                    <a href="http://www.fundacionpersonas.org/landing/" target="_blank">Fundación Personas</a></br></p>
                 </div>
             </section>
 
