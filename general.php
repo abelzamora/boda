@@ -1,340 +1,339 @@
 <?php
 session_start();
-if($_SESSION["logeado"] != "SI"){ 
-	$error = '<p class="error">Acceso sin codigo no permitido</p>';
-	include('login.php');
-	exit;
+if ($_SESSION["logeado"] != "SI") {
+    $error = '<p class="error">Acceso sin codigo no permitido</p>';
+    include('login.php');
+    exit;
 }
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>M&A Boda</title>
-        <meta name="description" content="Welcome to the wedding website for Sarah and Brad's Big Day!">
+    <title>M&amp;A Boda</title>
+    <meta name="description" content="Bienvenido a la pagina web de la boda de Abel y María!">
 
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
 
-        <!-- For iPhone 4 with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-        <!-- For first-generation iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
-        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <!-- For first-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
-        <link rel="shortcut icon" href="favicon.ico?v=1">
+    <link rel="shortcut icon" href="favicon.ico?v=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main-1.6.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main-1.6.css">
+    <link rel="shortcut icon" href="img/novios.png" type="image/png">
 
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <div id="bg-image">
-            <img src="img/bk.jpg" alt="bg" />
+
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+
+<div id="bg-image">
+    <img src="img/bk.jpg" alt="bg"/>
+</div>
+
+<div id="bg-container">
+
+    <div class="header-container">
+        <div id="heading" class="wrapper clearfix">
+            <nav id="nav">
+                <ul>
+                    <li><a href="#ceremonia">Ceremonia</a></li>
+                    <li><a href="#wedding">Banquete &amp; Discoteca</a></li>
+                    <li><a href="#accomodations">Alojamiento</a></li>
+                    <li><a href="#invitacion">Invitación Tradicional</a></li>
+                    <li><a href="#confirmaciones" onClick="return submitWindow();">Confirmaciones</a></li>
+                </ul>
+
+            </nav>
         </div>
+    </div>
 
-        <div id="bg-container">
+    <div class="main-container">
+        <div class="main wrapper clearfix">
 
-            <div class="header-container">
-                <div id="heading" class="wrapper clearfix">
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="#brideandgroom">THE BRIDE &amp; GROOM</a></li>
-                            <li><a href="#wedding">WEDDING</a></li>
-                            <li><a href="#accomodations">ACCOMODATIONS</a></li>
-                            <li><a href="#registry">REGISTRY</a></li>
-                            <li><a onClick="return submitWindow();">RSVP</a></li>
-                            <!--li><a href="http://sarahlovesbradley.tumblr.com" target="_blank">BLOG</a></li-->
-                        </ul>
-
-                    </nav>
-                </div>
-            </div>
-
-            <div class="main-container">
-                <div class="main wrapper clearfix">
-
-                    <header>
-                        <div id="introtext">
-                            <span class="head-sarah">Maria</span>
+            <header>
+                <div id="introtext">
+                    <span class="head-sarah">María</span>
                             <span class="head-brad">&nbsp;
                                 <span class="amp">&amp;</span> 
                                 ABEL
                             </span>
-                            <div class="date">Agosto 6<sup>th</sup>, 2016, Zamora, Espana</div>
-                        </div>
-                    </header>
 
-                    <div class="clearfix"></div>
+                    <div class="date">6 de Agosto, 2016, Zamora, Espana</div>
+                </div>
+            </header>
 
-                    <section id="brideandgroom" class="clearfix">
+            <div class="clearfix"></div>
 
-                        <h1>The Bride and Groom</h1>
-                                
-                        <div class="column left">
+            <section id="ceremonia" class="clearfix">
+                <h1>Ceremonia</h1>
 
-                            <h2>SARAH</h2>
-                            <p>
-                                <img src="img/sarahThumb.jpg" class="thumb" alt="Sarah" />
-                                Sarah is most thankful to her parents for the gift of two loving big brothers &amp; five amazing role-model sisters. As the second-youngest, Sarah spent her childhood twirling &amp; dancing around, putting on talent shows for her parents &amp; grandparents. Her creative spirit and eye for design was established at a young age, as she highly disapproved of Mattel’s © furnishings and décor within her Barbie House. If Barbie needed an interior makeover (which was frequent) Sarah looked through Sunday newspaper ads &amp; IKEA magazines for inspiration, drew the new contents by hand and placed them as backdrops in the Barbie house. After graduation from Mater Dei High School, Sarah explored the metropolitan life in San Francisco and graduated with a BS in Interior Design from San Francisco State University. Sarah is adding to her vows that she will forever allow a one-room “man-den” with it’s contents and décor subject to Bradley’s discretion.</p>
+                <div class="column left">
+                    <h2>Iglesia de Santa María de la Horta</h2>
 
-                        </div><!--end column-->
-                        <div class="column right">
+                    <p>
+                        La iglesia de Santa María de la Horta, también llamada simplemente iglesia de la Horta, es un templo románico de la ciudad de Zamora, España. Es Monumento Nacional desde el 3 de junio de 1931.
+                        <br/><br/>
+                        <img src="img/iglesia.jpg" class="theinn" alt="Iglesia de Santa María de la Horta" width="400" height="400"/>
 
-                            <h2>BRADLEY</h2>
-                            <p>
-                                <img src="img/bradThumb.jpg" class="thumb" alt="Brad" />
-                                Born in Mission Viejo, California, Bradley spent half of his life living with his mother in San Diego and half with his wonderful Wisconsin family. Bradley grew up playing ice hockey while secretly learning how to build computers. Half jock, half nerd, he has cultivated these interests well into his adult life, that make him who he is today. After his graduation from the University of San Francisco with a degree in Information Systems, Bradley worked for Yahoo! for seven years, and continued to explore the tech startup scene in  San Francisco. With an entrepreneurial spirit and passion for technology, Bradley now runs his own software company, Scal.io, building hand-crafted mobile,  web, and desktop apps for tech companies in the Silicon Valley and beyond. Bradley is adding to his vows a lifetime IT guarantee to Sarah, that he will be readily available 24/7 to troubleshoot... anything &amp; everything technical.</p>
-
-                        </div><!--end column-->
-
-                        <div class="clearfix"></div>
-
-                        <div class="column full">
-                            <div class="hr-t"></div>
-                            <div class="hr-b"></div>
-                        </div>
-
-                        <div class="column full">
-
-                            <h2>HOW WE MET</h2>
-                            <p>In 2010 the two were both wild and running free around San Francisco’s Marina District, as most singles do. Bradley was quite the bachelor- planning weekend getaways with friends, float trips, and taking last minute trips to Ibiza, Cabo, wherever the wind blew. Sarah was quite the bachelorette, wining and dining around San Francisco, on a strict agenda which included over-extending herself, saying yes to every social engagement that came her way.  After a mutual friend of the two suggested they would make a cute couple, a date was on the books and they began to discover just how compatible they were. In no time, they also discovered they were inseparable and very in love. The rest is history- they’ve shared some amazing adventures around the world, each other's toothbrushes, and now they’re ready to share the rest of their lives together, too.</p>
-
-                        </div><!--end column-->
-
-                        <div class="column full">
-                             
-                            <figure class="responsive-image proposal" data-media="img/onknee-small.jpg" data-media480="img/onknee-small.jpg" data-media768="img/onknee-medium.jpg" data-media1140="img/onknee-large.jpg" title="Brad Proposing To Sarah">
-                                <noscript>
-                                    <img src="../img/onknee-large.jpg" alt="Brad Proposing To Sarah" />
-                                </noscript>
-                            </figure>
-
-                            <h2>THE ENGAGEMENT</h2>
-                            <p>Down in San Diego for a weekend to visit Bradley’s mom, the pair decided to spend the beautiful morning at Balboa Park. After returning to their hotel, Bradley asked Sarah to run up to their room for a bottle of wine that had been chilling. Bradley said he was going to ask concierge for a “wine opener” and that he’d meet her in the courtyard. As Sarah opened the door to the room, she “freaked out”, thinking she was in the wrong room. It was decorated with bouquets of her favorite flowers, decadent treats and champagne. Rose petals on the floor led her to the open balcony, and as she walked out she saw Bradley waiting for her down below, with a huge grin on his face. And like out of a fairy tale, Romeo asked Juliet to be his wife. She giggled, and said yes. Bradley had it all captured by a hidden, sniper-style photographer.</p>
-                                                        
-                        </div><!--end column-->
-
-                    </section>
-
-                    <section id="wedding" class="clearfix">
-
-                        <h1>Wedding</h1>
-
-                        <div class="column left">
-                            <h2>CEREMONY</h2>
-                            <p>
-                                The Inn at Rancho Santa Fe <br />
-                                Rancho Santa Fe, California <br /><br />
-                                Friday, September 6, 2013 <br />
-                                6:00 PM at the Croquet Lawn <br /><br />
-                                *Adult reception to follow <br /><br /><br />
-
-                                <img src="img/theinn-large.png" class="theinn" alt="The Inn at Rancho Santa Fe" />
-                            </p>
-                            
+                    </p>
 
 
-                        </div><!--end column--> 
-                        <div class="column right">
-                            <h2>SCHEDULE OF EVENTS</h2>
-                            <p>
-                                Rehearsal Dinner <br />
-                                Thursday, September 5th at 8pm<br /><br />
-                                Golf <br />
-                                Friday, September 6th at 9am<br /><br />
-                                Ceremony <br />
-                                Friday, September 6th at 6pm (reception to follow)<br /><br />
-                                Breakfast &amp; Bocce <br />
-                                Saturday, September 7th at 10am<br />
-                            </p>
-                        </div><!--end column--> 
+                </div><!--end column-->
+                <div class="column right">
+                    <h2>Horarios de los eventos</h2>
+                    <p>
+                        Ceremonia religiosa <br/>
+                        Sabado, 6 de Agosto a las 18:00<br/><br/>
+                    </p>
 
-                        <div class="clearfix"></div>
+                    <h2>Dirección</h2>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.6966990285855!2d-5.746663885068915!3d41.50141869688208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta!5e1!3m2!1sen!2ses!4v1457210298125&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <br/>
+                    </div>
+                </div><!--end column-->
 
-                        <div class="column full">
-                            <div class="hr-t"></div>
-                            <div class="hr-b"></div>
-                        </div>
+                <div class="clearfix"></div>
 
-                        <h2>BRIDAL PARTY</h2>
+                <div class="column full">
+                    <div class="hr-t"></div>
+                    <div class="hr-b"></div>
+                </div>
 
-                        <div class="column left bp">
-                            
-                            <h2>Bridesmaids </h2>
-                            <div class="column left">
-                                <p>
-                                Coming Soon!<br />
-                                </p>
-                            </div>
-                            <div class="column right">
-                                <p>
-                                </p>
-                            </div>
 
-                        </div><!--end column--> 
-                        <div class="column right bp">
 
-                            <h2>Groomsmen</h2> 
-                            <div class="column left">
-                                <p>
-                                Coming Soon!<br />
-                                </p>
-                            </div>
-                            <div class="column right">
-                                <p>
-                                </p>
-                            </div>
 
-                        </div><!--end column-->           
-                    </section>
+            </section>
 
-                    <section id="accomodations" class="clearfix">
+            <section id="wedding" class="clearfix">
 
-                        <h1>Accomodations</h1>
+                <h1>Banquete &amp; Discoteca</h1>
 
-                        <div class="column left">
+                <div class="column left">
+                    <h2>Finca Maradela</h2>
 
-                            <h2>HOTELS</h2>
-                            <p>
-                                (At the venue) <br />
-                                The Inn at Rancho Santa Fe <br />
-                                5951 Linea Del Cielo <br />
-                                Rancho Santa Fe, CA 92067 <br />
-                                <a href="tel:1-858-756-1131">(858) 756-1131</a> <br />
-                                $279 <br /> 
-                                - <br />
-                                Morgan Run Resort &amp; Club (1.9 miles away) <br />
-                                5690 Cancha De Golf <br />
-                                Rancho Santa Fe, CA 92091 <br />
-                                <a href="tel:1-866-599-6674">(866) 599-6674</a> <br />
-                                $90 <br />
-                                - <br />
-                                (Closer to the beach) <br />
-                                Courtyard San Diego Solana Beach/Del Mar (4.5 miles away) <br />
-                                717 S Hwy 101 <br />
-                                Solana Beach, CA <br />
-                                <a href="tel:1-858-792-8200">(858) 792-8200</a> <br />
-                                $109 <br />
-                            </p>
-                        </div><!--end column-->
+                    <p>
+                        Maradela, tierra de restos romanos, de manantiales de estanques y de leyendas. Se cuenta que
+                        aqui tuvo lugar la famosa batalla de Toro <br/>
+                        que logró asegurar el trono de Castilla a Isabel y Fernando <br/><br/>
+                        Fue poseedora de un monasterio en el Siglo XII. Albergó un palacio, vinedos, olivos y una
+                        extensa variedad de arboles frutales que aun hoy engalanan sus bellos rincones<br/><br/>
+                        Cuenta ademas con visitantes ilustres como Felipe III y su valido el Duque de Lerma.<br/><br/>
 
-                        <div class="column right">
-                            <h2>DIRECTIONS</h2>
-                            <p>
-                                Northbound from San Diego <br /><br />
-                               
-                                Take Interstate 5 North to the Villa de La Valle exit #36.  Turn right (east) onto Via de La Valle, and proceed for 4 miles. After crossing La Gracia, turn left on Via de Santa Fe following the signs to Rancho Santa Fe.  At the first stop sign, turn left onto Paseo Delicias and drive 2 blocks to a five way stop.  Take a slight right onto Linea del Cielo and proceed for one block.  The Inn is located on the left side of the road at 5951 Linea del Cielo.
-                                <br /><br />
+                        <img src="img/logoMaradela.png" class="theinn" alt="Maradela"/>
 
-                                Southbound from LA, Riverside &amp; OC<br /><br />
-                               
-                                Take Interstate 5 South to the Lomas Santa Fe exit #37.  Turn left (east) onto Lomas Santa Fe, and proceed 4.5 miles.  The road name will change to Linea Del Cielo.  The Inn is located on the right side of the road at 5951 Linea del Cielo.
-                                <br />
-                            </p>
-                            
-                        </div><!--end column-->
+                    </p>
 
-                        <div class="clearfix"></div>
 
-                        <div class="column full">
-                            <div class="hr-t"></div>
-                            <div class="hr-b"></div>
-                        </div>
+                </div><!--end column-->
+                <div class="column right">
+                    <h2>Horarios de los eventos</h2>
 
-                        <div class="column full">
+                    <p>
+                        Ceremonia religiosa <br/>
+                        Sabado, 6 de Agosto a las 18:00<br/><br/>
+                        Banquete <br/>
+                        Sabado, 6 de Agosto a las 20:30<br/><br/>
+                        Discoteca <br/>
+                        Sabado, 6 de Agosto a las 23:59<br/><br/>
+                    </p>
+                        <h2>Pagina web</h2>
+                    <p>
+                        <a href="http://www.fincamaradela.com" target="	_blank">Finca Maradela</a>
+                    </p>
 
-                            <h2>VICINITY MAP</h2>
+                    <h2>Dirección</h2>
+                    <div id="gmap">
 
-                            <div id="gmap">
-                                <iframe src="https://maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed"></iframe>
-                                <br />
-                                <small><a href="https://maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed" target="_blank">View larger map</a></small>
-                            </div>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2298.0725627587585!2d-5.50511274727613!3d41.488147370420215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI5JzE3LjMiTiA1wrAzMCcxMS44Ilc!5e1!3m2!1sen!2ses!4v1457206245199&amp;output=embed" frameborder="0"></iframe>
+                        <br/>
+                    </div>
 
-                        <div class="clearfix"></div>
+                </div><!--end column-->
 
-                        <div class="column full">
-                            <div class="hr-t"></div>
-                            <div class="hr-b"></div>
-                        </div>
+                <div class="clearfix"></div>
 
-                        <div class="column full">
-                            <h2>ABOUT RANCHO SANTA FE</h2>
-                            <p>
-                                Choose to relax and soak up the California sunshine at the resort's pool, or meander across the street to explore the boutiques, jewelry stores, restaurants and antique shops at The Village of Rancho Santa Fe (fondly referred to as "The Village" by the residents).  A friday morning tee time will be arranged for those who are interested, at Rancho Santa Fe Golf Club- a private, 18-hole championship golf course considered one of the Top 20 Best Golf Courses in California.
-                            </p>
-                        </div><!--end column-->
-            
-                        <div class="column full">
-                            <h2>HISTORY OF THE INN</h2>
-                            <p>
-                                Ninety years ago, construction began on La Morada (“dwelling” in Spanish), the first building in what would become Rancho Santa Fe. Now known as The Inn at Rancho Santa Fe, “The Inn” to locals, it was then a guesthouse for prospective land buyers, a place to “put them up” while they looked at lots owned by the Santa Fe Land Improvement Company. The company, a subsidiary of the Santa Fe Railway, had bought up parcels, planting eucalyptus trees for railroad spikes. But as history has so often shown, not everything goes according to plan. The wood, the company discovered, was too soft to hold the spikes. It was on to plan B.
-                            </p>
-                            <p>
-                                That plan turned out to be fortuitous. It led to the master-planned community of Rancho Santa Fe, designed by Lilian Rice, a National City-born architect and U.C. Berkeley graduate, who would earn acclaim for her signature Spanish Colonial Revival style. Rice designed the village’s key commercial and residential buildings, many now considered so historically significant that they are listed on the National Register of Historic Places.
-                            </p>
-                            <p>
-                                Throughout the decades The Inn has been a favorite destination for many years of famous and influential people.  In 1932, singer-actor Bing Crosby purchased one of Juan Osuna’s original adobes with 50 acres, and hired Lilian Rice as his architect. Legendary architect Frank Lloyd Wright was married in the parlor of the Inn in 1928.   
-                            </p>
-                            <p>
-                                Just as the architecture of the missions tells a story about the history of California, so does Lilian Rice’s legendary design of The Inn. It is a perfect representation of old California charm and Rice's belief that true beauty lies in simplicity rather than ornateness. The Inn is a perfect reflection of Rice's dream - a place where time stands still amidst the simplistic, natural beauty that is Rancho Santa Fe.  &nbsp;&nbsp;
-                                
-                                Go <a href="http://www.theinnatrsf.com/press_media/" target="_blank">here</a> and <a href="http://ranchandcoast.com/DETOUR/27/destinations/4506/THEN-NOW-INN-AT-RANCHO-SANTA-FE/IMAGE/10526/" target="_blank">here</a> for more information.
+                <div class="column full">
+                    <div class="hr-t"></div>
+                    <div class="hr-b"></div>
+                </div>
 
-                            </p>
-                        </div><!--end column-->
 
-                    </section>
+            </section>
 
-                    <section id="registry" class="clearfix">
+            <section id="accomodations" class="clearfix">
 
-                        <h1>Registry</h1>
+                <h1>Alojamiento</h1>
 
-                        <div class="column full">
-                        
-                            <p>Due to the nature of city life (not a great deal of storage space), we have decided to embrace the HONEYMOON REGISTRY site.  However, if your prefer the traditional route, we are registered at Williams Sonoma, Sur La Table, &amp; Macy's.  A link for the registry sites will be coming soon!</p>  
-                            <p>
-                            LOVE NOTES FOR SARAH &amp; BRADLEY <br />
-                            Email us at ... <br />
-                            </p>
-                            
-                        </div><!--end column-->
-               
-                    </section>
+                <div class="column left">
 
-                    <div style="height: 300px"></div>
+                    <h2>HOTEL</h2>
 
-                </div> <!-- #main -->
-            </div> <!-- #main-container -->
-        </div> <!-- #bg-container -->
+                    <p>
+                        Habitación Doble y/o Individual: 62€ en régimen de alojamiento
 
-        <script src="js/main-1.6.js"></script>
-        
-		<script>
-		    function submitWindow() {
-		        // URL, name and attributes
-    			popupwindow('http://localhost:8888/wedding/rsvp.php','windowNew','500','700');
-		        return true;
-		    }
+                        10% IVA no incluido
+                        Precio por habitación y noche
+                        *Impuestos sujetos a cambios oficiales. Cualquier aumento de IVA u otro impuesto será añadido al importe final.
 
-		    function popupwindow(url, title, w, h) {
-		    	  var left = (screen.width/2)-(w/2);
-		    	  var top = (screen.height/2)-(h/2);
-		    	  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-		    	} 
-		</script>
+                    </p>
 
-    </body>
+                    <p>
+                        Si os decidís por esta opción, al llamar al hotel para realizar la reservar teneís que dar el nombre de los novios: "ABEL y MARÍA", boda 6 de agosto
+
+                    </p>
+
+                    <p>
+                        AC Hotel Zamora <br/>
+                        Avda Principe de Asturias, 43 <br/>
+                        49029 <br/>
+                        Zamora, Espana <br/>
+                        <a href="http://www.marriott.com/hotels/travel/slmza-ac-hotel-zamora/" target="_blank">AC Hotel Zamora</a> <br/>
+                    </p>
+                </div><!--end column-->
+
+                <div class="column right">
+                    <h2>Dirección</h2>
+
+                    <p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.511101375505!2d-5.739130684910359!3d41.5116449962463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd391e245c520b87%3A0xa301aeb403bf8005!2sAC+Hotel+Zamora!5e1!3m2!1sen!2ses!4v1457208160309" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </p>
+
+                </div><!--end column-->
+
+                <div class="clearfix"></div>
+
+                <div class="column full">
+                    <div class="hr-t"></div>
+                    <div class="hr-b"></div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="column full">
+                    <div class="hr-t"></div>
+                    <div class="hr-b"></div>
+                </div>
+
+                <div class="column full">
+                    <h2>Indicaciones</h2>
+
+                    <p>
+                      Como creemos que una imagen vale mas que 100 palabras, hemos puesto los mapas de como llegar a las diferentes ubicaciones de la boda.
+                    </p>
+
+                    <p>
+                    Hotel AC - Iglesia Santa María de la Horta
+                    </p>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10908.958704710943!2d-5.749427717886608!3d41.50637278738658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0xd391e245c520b87%3A0xa301aeb403bf8005!2sAC+Hotel+Zamora%2C+Avenida+del+Pr%C3%ADncipe+de+Asturias%2C+Zamora!3m2!1d41.511641!2d-5.736942!4m5!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta%2C+49002+Zamora!3m2!1d41.5014147!2d-5.7444752!5e1!3m2!1sen!2ses!4v1457209115792" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br/>
+                    </div>
+                    <p>
+                    Iglesia Santa María de la Horta - Finca Maradela
+                    </p>
+                    <p>
+                        Al terminar la ceremonia religiosa tienes dos opciones para llegar hasta la Finca Maradela, una es con tu propio coche o la otra es utilizar uno de los autobuses que tendras a tu disposcion.
+                    </p>
+                    <br/>
+                    <p>
+                        Con tu coche:
+                    </p>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d87252.54632128075!2d-5.694474196984075!3d41.520558333184276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta!3m2!1d41.5014147!2d-5.7444752!4m3!3m2!1d41.488138899999996!2d-5.503277799999999!5e1!3m2!1sen!2ses!4v1457206703909" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <p>
+                        Con el autobus: el autobus os estara esperando en la Dirección que puedes encontrar en el mapa de abajo
+                    </p>
+                    <div id="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1368.8470258715656!2d-5.746043847313712!3d41.50109616113351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d41.500616699999995!2d-5.7457706!4m5!1s0xd391e324eea678d%3A0xa63e445313f37373!2sIglesia+de+Santa+Mar%C3%ADa+de+la+Horta%2C+49002+Zamora!3m2!1d41.5014147!2d-5.7444752!5e1!3m2!1sen!2ses!4v1457222227492" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div><!--end column-->
+
+            </section>
+
+            <section id="invitacion" class="clearfix">
+                <h1>Invitación Tradicional</h1>
+                <div class="column full" >
+                    <p>
+                        Las invitaciones tradicionales fueron hechas por la Fundación Personas, nos gustaría dar a conocer la gran labor que realizan día tras día.
+                    </p>
+                 </div>
+
+                <div class="column left">
+                    <p><img src="img/fundacionPersonas1.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/></p>
+                </div>
+                <div class="column right">
+                    <p><img src="img/fundacionPersonas2.jpeg" class="theinn" alt="Fundacion Personas" width="400" height="400"/></p>
+                </div>
+                <div class="column full" >
+                    <p><img src="http://www.fundacionpersonas.org/landing/wp-content/uploads/2015/05/FP.jpg" onclick="http://www.fundacionpersonas.org/landing/"><br>
+                    <a href="http://www.fundacionpersonas.org/landing/" target="_blank">Fundación Personas</a></br></p>
+                </div>
+            </section>
+
+            <section id="confirmaciones" class="clearfix">
+
+                <h1>Confirmaciones</h1>
+
+                <div class="column full">
+
+                    <p>Para confirmar tu asistencia, tienes varias opciones. La primera es pinchar en este enlace <a onClick="return submitWindow();">(Confirmaciones)</a> y decirnos si vas a venir ;). O también puedes mandar un correo electronico a estas direcciones <a href="mailto:mevsmyself@gmail.com">Abel</a> y <a href="mailto:mariaza66@hotmail.com">Maria</a>.</p>
+
+                    <p>
+                        Te esperamos el 6 de agosto! <br/>
+                        No nos faltes!!! <br/>
+                    </p>
+
+                </div><!--end column-->
+
+            </section>
+
+            <div style="height: 300px"></div>
+
+        </div> <!-- #main -->
+    </div> <!-- #main-container -->
+</div> <!-- #bg-container -->
+</body>
+<footer>
+    <script src="js/script.js"></script>
+    <script src="js/main-1.6.js"></script>
+
+    <script>
+        function submitWindow() {
+            // URL, name and attributes
+            var link = window.location.origin;
+            if (window.location.hostname == 'localhost') link = link + '/wedding/rsvp.php';
+            else link = link + '/rsvp.php';
+            popupwindow(link, 'windowNew', '500', '700');
+            return true;
+        }
+
+        function popupwindow(url, title, w, h) {
+            var left = (screen.width / 2) - (w / 2);
+            var top = (screen.height / 2) - (h / 2);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        }
+    </script>
+</footer>
+<?php include_once("analyticstracking.php") ?>
 </html>

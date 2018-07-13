@@ -1,30 +1,34 @@
 <html>
 <head>
-<title>Administracion boda Abel y Maria</title>
-
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
+    <title>Administracion boda Abel y Maria</title>
+    <link rel="stylesheet" href="css/style_admin.css">
 </head>
 <body>
-<?php 
-				if(isset($error)) echo $error;
-			?>
-	<form name="form1" method="post" action="admin_entrar.php">
-  Nombre:<br>
-  <label>
-  <input name="name" type="text" id="name" autocomplete="off" autofocus="autofocus" value="">
-  </label>
-  <p>Codigo:<br>
-    <label>
-      <input name="code" type="text" id="code" value="" autocomplete="off">
-    </label>
-  </p>
-  <p>
-    <label></label>
-    <label>
-    <input type="submit" name="Submit" value="Enviar Registro">
-    </label>
-  </p>
-</form>
-	
+
+<div class="container">
+
+    <div id="login-form">
+
+        <h3>Login</h3>
+
+        <fieldset>
+
+            <form name="form1" method="post" action="admin_entrar.php">
+                <input title="Name" name="name" required="required" type="text" id="name" autocomplete="off" value="Name"
+                       onBlur="if(this.value=='')this.value='Name'" onFocus="if(this.value=='Name')this.value='' ">
+                <input title="Password" name="code" type="password" required="required" id="code" value="Code" autocomplete="off"
+                       onBlur="if(this.value=='')this.value='Code'" onFocus="if(this.value=='Code')this.value='' ">
+                <?php
+                if (isset ($error))
+                    echo $error;
+                ?>
+                <input type="submit" name="Submit" value="Entrar">
+            </form>
+        </fieldset>
+    </div>
+</div>
 
 </body>
+<?php include_once("analyticstracking.php") ?>
 </html>

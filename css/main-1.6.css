@@ -29,10 +29,12 @@ body {
     background: #b3d4fc;
     text-shadow: none;
 }
+
 a {
     color: #b1bf92;
     text-decoration: none;
 }
+
 hr {
     display: block;
     height: 1px;
@@ -63,7 +65,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ===== Initializr Styles ==================================================
    Author: Bradley Greenwood
    ========================================================================== */
@@ -78,7 +79,6 @@ body {
     width: 90%;
     margin: 0 5%;
 }
-
 
 /* =============================================================================
    GOOGLE MAPS
@@ -120,8 +120,8 @@ body {
    =================== */
 
 .header-container {
-    position:absolute;
-    bottom:20px;
+    position: absolute;
+    bottom: 20px;
     width: 100%;
     background: black;
     z-index: 10;
@@ -130,7 +130,7 @@ body {
     /* RGBa with 0.9 opacity */
     background: rgba(0, 0, 0, 0.8);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000)";
 }
@@ -138,6 +138,7 @@ body {
 .title {
     color: black;
 }
+
 #introtext {
     display: block;
     padding: 10px 0 10px 0;
@@ -155,7 +156,7 @@ body {
     /* RGBa with 0.7 opacity */
     background: rgba(0, 0, 0, 0.4);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
@@ -165,17 +166,20 @@ body {
     font-size: 5em;
     line-height: 100%;
 }
+
 #introtext .amp {
     position: relative;
     top: 19px;
     margin-left: -10px;
     font-size: 0.7em;
 }
+
 #introtext .head-brad {
     font-family: "futura_ltbook", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 2em;
     line-height: 100%;
 }
+
 #introtext .date {
     margin-top: 10px;
     font-family: "futura_ltbook", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -191,7 +195,7 @@ nav {
 }
 
 nav ul {
-    font-family:"futura_ltbook",Arial,sans-serif;
+    font-family: "futura_ltbook", Arial, sans-serif;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -216,24 +220,22 @@ nav li a:hover {
     text-decoration: none;
     outline: none;
 }
+
 nav li a.selected {
     color: #fff;
     background: #b1bf92;
     text-decoration: none;
     outline: none;
 }
- a.confirmacion {
-    color: #aaaa;
-    background: #gggggg;
-    text-decoration: none;
+
+/** firefox remove outline **/
+nav ul li a:focus {
     outline: none;
 }
 
-/** firefox remove outline **/
-nav ul li a:focus {outline:none;}
-nav ul li a::-moz-focus-inner {border:0;}
-
-
+nav ul li a::-moz-focus-inner {
+    border: 0;
+}
 
 /* ==============
     MOBILE: Main
@@ -242,6 +244,7 @@ nav ul li a::-moz-focus-inner {border:0;}
 .main {
     padding: 5% 0;
 }
+
 .main header {
     float: left;
     width: 80%;
@@ -250,32 +253,37 @@ nav ul li a::-moz-focus-inner {border:0;}
 /* ==========================================================================
    Brad's custom styles
    ========================================================================== */
-* { margin: 0; padding: 0; }
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
 
 }
 
 body {
-    font-family: "futura_ltbook", "HelveticaNeueLTStdRegular","HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "futura_ltbook", "HelveticaNeueLTStdRegular", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: #fff;
     text-align: center;
 
 }
 
 #bg-image {
-    position: fixed; 
-    top: -50%; 
-    left: -50%; 
-    width: 200%; 
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
     height: 200%;
 }
+
 #bg-image img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     min-width: 50%;
     min-height: 50%;
 }
@@ -303,7 +311,7 @@ section {
     /* RGBa with 0.7 opacity */
     background: rgba(0, 0, 0, 0.7);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
@@ -314,10 +322,11 @@ section h1 {
     font-size: 2.6em;
 
 }
+
 section h2 {
     font-size: 1.1em;
     line-height: 120%;
-    padding: 0 0px;
+    padding: 0 0;
 }
 
 .column {
@@ -326,6 +335,7 @@ section h2 {
     padding: 0;
     margin: 0;
 }
+
 .column p {
     font-size: 1em;
     line-height: 145%;
@@ -338,29 +348,28 @@ section h2 {
 
 @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
     body {
         background-position: 50% 20%;
     }
 
     /** get the transparent bar on the bottom **/
     .header-container {
-        position:absolute;
-        bottom:20px;
-        width:100%;
-        line-height:12px;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        line-height: 12px;
     }
 
     .header-container.sticky {
         position: fixed;
         top: 15px;
-        
-        animation:thedrop 1s 1;
-        -moz-animation:thedrop 1s 1;
-        -webkit-animation:thedrop 1s 1;
+
+        animation: thedrop 1s 1;
+        -moz-animation: thedrop 1s 1;
+        -webkit-animation: thedrop 1s 1;
     }
 
     #introtext {
@@ -370,20 +379,24 @@ section h2 {
     #introtext .head-sarah {
         font-size: 7em;
     }
+
     #introtext .amp {
         position: relative;
         top: 29px;
         font-size: 0.9em;
         margin-left: -20px;
     }
+
     #introtext .head-brad {
         font-size: 3em;
     }
+
     #introtext .date {
         font-size: 1.1em;
         margin-top: 15px;
         margin-bottom: 20px;
     }
+
     nav {
         display: block;
     }
@@ -394,6 +407,7 @@ section h2 {
         padding: 0;
         text-align: center;
     }
+
     nav ul li {
         display: inline;
         padding: 0;
@@ -403,7 +417,7 @@ section h2 {
     nav a {
         padding: 15px 1%;
         margin-bottom: 0;
-        display:inline-block;
+        display: inline-block;
         font-size: 60%;
         white-space: nowrap;
 
@@ -430,13 +444,14 @@ section h2 {
     section {
         padding: 40px 40px 70px 40px;
     }
+
     section h1 {
         font-size: 3.1em;
     }
+
     section h2 {
         font-size: 1.7em;
     }
-
 
     .column p {
         font-size: 1.1em;
@@ -446,12 +461,9 @@ section h2 {
         height: 400px;
     }
 
-
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
     nav ul li {
         display: inline;
     }
@@ -463,41 +475,42 @@ section h2 {
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
+    /* ====================
+        WIDE: CSS3 Effects
+       ==================== */
     section h1 {
         font-size: 4.9em;
     }
+
     section h2 {
         font-size: 2.0em;
     }
 
-/* ============
-    WIDE: Menu
-   ============ */
-
+    /* ============
+        WIDE: Menu
+       ============ */
     #introtext .head-sarah {
         font-size: 9em;
-   }
+    }
+
     #introtext .amp {
         top: 0;
         font-size: 1em;
     }
+
     #introtext .head-brad {
         font-size: 4em;
     }
+
     #introtext .date {
         font-size: 2em;
         margin-top: 15px;
         margin-bottom: 20px;
     }
 
-/* ============
-    WIDE: Main
-   ============ */
-
+    /* ============
+        WIDE: Main
+       ============ */
     .main header {
         margin-top: 10%;
         margin-bottom: 30%;
@@ -510,12 +523,14 @@ section h2 {
         font-size: 90%;
     }
 }
+
 @media only screen and (min-width: 900px) {
 
     section h1,
     section h2 {
         padding: 0 20px;
     }
+
     section h1 {
         font-size: 5.9em;
     }
@@ -525,25 +540,25 @@ section h2 {
         float: none;
         width: 100%;
     }
+
     .column {
         float: left;
         width: 50%;
     }
+
     .column p {
         font-size: 1.4em;
         line-height: 145%;
         padding: 0 20px;
-    }  
+    }
 
 }
 
-
 @media only screen and (min-width: 1140px) {
 
-/* ===============
-    Maximal Width
-   =============== */
-
+    /* ===============
+        Maximal Width
+       =============== */
     nav a {
         padding: 15px 3%;
         font-size: 120%;
@@ -557,13 +572,16 @@ section h2 {
     #introtext .head-sarah {
         font-size: 11em;
     }
+
     #introtext .amp {
         top: 0;
         font-size: 1.1em;
     }
+
     #introtext .head-brad {
         font-size: 5em;
     }
+
     #introtext .date {
 
         font-size: 2.5em;
@@ -578,7 +596,6 @@ section h2 {
         width: 100%;
     }
 
-  
 }
 
 /* ==========================================================================
@@ -671,7 +688,6 @@ section h2 {
     /*
      * Don't show links for images, or javascript/internal links
      */
-
     .ir a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
@@ -714,8 +730,6 @@ section h2 {
     }
 }
 
-
-
 /* =============================================================================
    FONTS
    ========================================================================== */
@@ -723,10 +737,7 @@ section h2 {
 @font-face {
     font-family: 'futura_ltbold';
     src: url('futuralt-bold-webfont.eot');
-    src: url('futuralt-bold-webfont.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8 */
-         url('futuralt-bold-webfont.woff') format('woff'),  /* Modern Browsers */
-         url('futuralt-bold-webfont.ttf') format('truetype'),  /* Safari, Android, iOS */
-         url('futuralt-bold-webfont.svg#futura_ltbold') format('svg');  /* Legacy iOS */
+    src: url('futuralt-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('futuralt-bold-webfont.woff') format('woff'), /* Modern Browsers */ url('futuralt-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('futuralt-bold-webfont.svg#futura_ltbold') format('svg');  /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
 }
@@ -735,9 +746,9 @@ section h2 {
     font-family: 'futura_ltbook';
     src: url('futuralt-book-webfont.eot');
     src: url('futuralt-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('futuralt-book-webfont.woff') format('woff'),
-         url('futuralt-book-webfont.ttf') format('truetype'),
-         url('futuralt-book-webfont.svg#futura_ltbook') format('svg');
+    url('futuralt-book-webfont.woff') format('woff'),
+    url('futuralt-book-webfont.ttf') format('truetype'),
+    url('futuralt-book-webfont.svg#futura_ltbook') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -746,9 +757,9 @@ section h2 {
     font-family: 'futura_ltregular';
     src: url('futuralt-webfont.eot');
     src: url('futuralt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('futuralt-webfont.woff') format('woff'),
-         url('futuralt-webfont.ttf') format('truetype'),
-         url('futuralt-webfont.svg#futura_ltregular') format('svg');
+    url('futuralt-webfont.woff') format('woff'),
+    url('futuralt-webfont.ttf') format('truetype'),
+    url('futuralt-webfont.svg#futura_ltregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -757,9 +768,9 @@ section h2 {
     font-family: 'alex_brushregular';
     src: url('alexbrush-regular-otf-webfont.eot');
     src: url('alexbrush-regular-otf-webfont.eot?#iefix') format('embedded-opentype'),
-         url('alexbrush-regular-otf-webfont.woff') format('woff'),
-         url('alexbrush-regular-otf-webfont.ttf') format('truetype'),
-         url('alexbrush-regular-otf-webfont.svg#alex_brushregular') format('svg');
+    url('alexbrush-regular-otf-webfont.woff') format('woff'),
+    url('alexbrush-regular-otf-webfont.ttf') format('truetype'),
+    url('alexbrush-regular-otf-webfont.svg#alex_brushregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -768,9 +779,9 @@ section h2 {
     font-family: 'great_vibesregular';
     src: url('greatvibes-regular-webfont.eot');
     src: url('greatvibes-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('greatvibes-regular-webfont.woff') format('woff'),
-         url('greatvibes-regular-webfont.ttf') format('truetype'),
-         url('greatvibes-regular-webfont.svg#great_vibesregular') format('svg');
+    url('greatvibes-regular-webfont.woff') format('woff'),
+    url('greatvibes-regular-webfont.ttf') format('truetype'),
+    url('greatvibes-regular-webfont.svg#great_vibesregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -779,39 +790,40 @@ section h2 {
     font-family: 'scriptina_proregular';
     src: url('scriptina_pro-webfont.eot');
     src: url('scriptina_pro-webfont.eot?#iefix') format('embedded-opentype'),
-         url('scriptina_pro-webfont.woff') format('woff'),
-         url('scriptina_pro-webfont.ttf') format('truetype'),
-         url('scriptina_pro-webfont.svg#scriptina_proregular') format('svg');
+    url('scriptina_pro-webfont.woff') format('woff'),
+    url('scriptina_pro-webfont.ttf') format('truetype'),
+    url('scriptina_pro-webfont.svg#scriptina_proregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-        font-family: 'EdwardianScrAltITCTT';
-        src: url('edwasai.eot');
-        src: url('edwasai.eot?#iefix') format('embedded-opentype'),
-                 url('edwasai.woff') format('woff'),
-                 url('edwasai.ttf') format('truetype'),
-                 url('edwasai.svg#edwasai') format('svg');
-        font-weight: normal;
-        font-style: normal;
+    font-family: 'EdwardianScrAltITCTT';
+    src: url('edwasai.eot');
+    src: url('edwasai.eot?#iefix') format('embedded-opentype'),
+    url('edwasai.woff') format('woff'),
+    url('edwasai.ttf') format('truetype'),
+    url('edwasai.svg#edwasai') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-        font-family: 'EdwardianScrAltITCTTBold';
-        src: url('edwasaib.eot');
-        src: url('edwasaib.eot?#iefix') format('embedded-opentype'),
-                 url('edwasaib.woff') format('woff'),
-                 url('edwasaib.ttf') format('truetype'),
-                 url('edwasaib.svg#edwasaib') format('svg');
-        font-weight: normal;
-        font-style: normal;
+    font-family: 'EdwardianScrAltITCTTBold';
+    src: url('edwasaib.eot');
+    src: url('edwasaib.eot?#iefix') format('embedded-opentype'),
+    url('edwasaib.woff') format('woff'),
+    url('edwasaib.ttf') format('truetype'),
+    url('edwasaib.svg#edwasaib') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .responsive-image.proposal {
     text-align: center;
     margin: 60px auto 60px auto;
 }
+
 .responsive-image.proposal img {
     border: 10px solid #090909;
 
@@ -822,7 +834,7 @@ section h2 {
     border-radius: 8px;
 }
 
-img.theinn  {
+img.theinn {
 
     text-align: center;
     margin-bottom: 50px;
@@ -831,6 +843,7 @@ img.theinn  {
 div.bp h2 {
     margin: 0;
 }
+
 div.bp .column p {
     line-height: 180%;
 }
@@ -838,23 +851,25 @@ div.bp .column p {
 .hr-t {
     margin: 80px auto 0 auto;
     width: 97%;
-    border-top:#1e1e1e solid 1px;
-    opacity:0.4;
-    filter:alpha(opacity=40); /* For IE8 and earlier */
+    border-top: #1e1e1e solid 1px;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
 .hr-b {
     margin: 0 auto 80px auto;
     width: 97%;
-    border-bottom:#808080 solid 1px;
-    opacity:0.4;
-    filter:alpha(opacity=40); /* For IE8 and earlier */
+    border-bottom: #808080 solid 1px;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
+
 a[href^=tel] {
     color: white;
     text-decoration: none;
     outline: none;
 }
+
 a.email {
     color: #b1bf92;
 }
